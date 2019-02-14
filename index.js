@@ -39,3 +39,9 @@ class Meal() {
     this.id = ++mealID
   }
 }
+
+deliveries(){
+  return store.deliveries.filter(delivery){
+    return delivery mealID === this.id
+  }
+}
