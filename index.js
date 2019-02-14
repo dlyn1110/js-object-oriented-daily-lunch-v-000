@@ -27,3 +27,15 @@ meals() {
      const merged = [].concat.apply([], allMeals);
      return [...new Set(merged)];
    }
+}
+
+let mealID = 0
+
+class Meal() {
+  constructor(title, price) {
+    this.title = title
+    this.price = price
+    store.meals.push(this)
+    this.id = ++mealID
+  }
+}
